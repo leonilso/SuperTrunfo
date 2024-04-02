@@ -1,0 +1,354 @@
+
+
+/* Reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#jogo{
+    display: block;
+}
+
+#animacao_placar{
+    text-align: center;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100lh;
+    background-color: green;
+    color: white;
+    font-size: 100px;
+    font-family: sans-serif;
+}
+
+#placar{
+    font-size: 40px;
+}
+
+.animacao_perdeu{
+    display: block;
+    animation-name: cairTexto;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 7s;
+}
+.animacao_ganhou{
+    display: block;
+    animation-name: pularTexto;
+    animation-iteration-count: 10;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+
+#criarSala{
+    padding: 10px 20px 10px 20px;
+
+
+    margin: 30px;
+
+    border-radius: 20px;
+
+    /* box-shadow: 0px 0px 0px rgba(10, 10, 10, 0.5); */
+}
+#criarSala:hover{
+    /* margin-top: 10px; */
+    box-shadow: 10px 5px 0px rgba(10, 10, 10, 0.222);
+}
+
+button{
+    transition: 0.5s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    color: #feffff; 
+    border: none;
+    background: linear-gradient(135deg, #8f17ff 60%, #1379ff);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button:hover{
+    transition: 0.5s;
+    background: linear-gradient(135deg, #8f17ff , #1379ff 60%);
+    box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.196);
+}
+
+.main{
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #F39563, #F25258);
+    z-index: -100;
+}
+
+/* .salasDisponiveis{
+    
+} */
+
+.configSala{
+    background: linear-gradient(135deg, #F25258, #F39563);
+    padding: 40px;
+    display: none;
+    border-radius: 10px;
+    border-top: 1px solid #F25258;
+    border-left: 1px solid #F25258;
+    border-bottom: 1px solid #F39563;
+    border-right: 1px solid #F39563;
+    /* box-shadow: 20px 20px 80px #f3956377;
+    box-shadow: -20px -20px 80px #f2525745; */
+    box-shadow: 20px 20px 40px #f3956377, -20px -20px 40px #f2525745;
+}
+
+.checkboxes{
+    list-style: none;
+}
+
+/* Estilização da carta */
+
+.sala{
+    display: flex;
+    color: white;
+    font-size: 40px;
+}
+.sala button{
+    width: 100px;
+}
+
+.salas{
+    display: block;
+}
+
+.carta{
+    display: none;
+    /* background-image: url("sprites/minha-carta/c5161456ed1fbe50c2ca1029787c0aa0.svg"); */
+    width: 151px;
+    height: 230px;
+
+}
+
+.controle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#voltar{
+    margin-top: 40px;
+}
+
+#minhaCarta{
+    width: 151px;
+    height: 230px;
+    position: absolute;
+    z-index: -2;
+}
+
+/* Estilização dos personagens */
+.Personagens svg{
+    position: absolute;
+    display: none;
+}
+
+#acessorios-tras{
+    position: absolute;
+    z-index: -1;
+}
+#acessorios-frente{
+    position: absolute;
+
+}
+#cabeca{
+    position: absolute;
+}
+
+#corpo{
+    position: absolute;
+}
+
+#pe{
+    position: absolute;
+}
+/* Posições */
+#passaro-pe{
+    left: 55px;
+    top: 92px;
+}
+#passaro-corpo{
+    left: 48px;
+    top: 61px;
+}
+#passaro-cabeca{
+    top: 21px;
+    left: 45px;
+}
+
+
+#jacare-cabeca{
+    top: 27px;
+    left: 52px;
+}
+#jacare-corpo{
+    left: 52px;
+    top: 62px;
+}
+#jacare-pe{
+    top: 92px;
+    left: 46px;
+}
+
+
+#sapo-pe{
+    left: 39.5px;
+    top: 92px;
+}
+#sapo-corpo{
+    left: 44px;
+    top:62px;
+}
+#sapo-cabeca{
+    top: 26px;
+    left: 55px;
+}
+
+
+#capivara-pe{
+    left: 55px;
+    top: 92px;
+}
+#capivara-corpo{
+    left: 40px;
+    top: 61px;
+}
+#capivara-cabeca{
+    left: 51px;
+    top: 22px;
+}
+
+
+
+#acessorio_frente_1{
+    top: 70px;
+    left: 90px;
+}
+#acessorio_frente_2{
+    top: 28px;
+    left: 78px;
+}
+#acessorio_frente_3{
+    top: 55px;
+    left: 85px;
+}
+#acessorio_frente_4{
+    top: 40px;
+    left: 90px;
+}
+#acessorio_frente_5{
+    top: 65px;
+    left: 53px;
+}
+#acessorio_frente_6{
+    top: 70px;
+    left: 40px;
+}
+#acessorio_frente_7{
+    top: 115px;
+    left: 49px;
+}
+#acessorio_frente_8{
+    top: 70px;
+    left: 55px;
+}
+#acessorio_frente_9{
+    top: 55px;
+    left: 55px;
+}
+
+#acessorio_tras_1{
+    top: 15px;
+    left: 13px;
+}
+#acessorio_tras_2{
+    top: 15px;
+    left: 9px;
+}
+#acessorio_tras_3{
+    top: 15px;
+    left: 15px;
+}
+#acessorio_tras_4{
+    top: 10px;
+    left: 26px;
+}
+#acessorio_tras_5{
+    top: 108px;
+    left: 37px;
+}
+
+
+
+
+/* Estilização dos botões */
+
+.botoes{
+    margin-top: 130px;
+    display: inline-grid;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu button{
+    height: 20px;
+    width: 100px;
+    margin: 4px;
+}
+.menu p{
+    padding: 1px 4px 1px 4px;
+    border-radius: 5px;
+    background-color: rgb(238, 244, 86);
+}
+
+@keyframes cairTexto {
+    0% { rotate: 0deg; 
+        margin-bottom: 0px;
+    }
+    25% { rotate: 90deg; 
+        margin-bottom: 0px;
+    }
+    50% { rotate: 80deg; 
+        margin-bottom: 0px;
+    }
+    75% { rotate: 90deg; 
+        margin-bottom: 0px;
+    }
+    100% { rotate: 90deg; 
+        margin-top: 5000px;
+    }
+}
+@keyframes pularTexto {
+    0% { rotate: 0deg; 
+        margin-bottom: 0px;
+    }
+    25% { rotate: 15deg; 
+        margin-bottom: 30px;
+    }
+    50% { rotate: 0deg; 
+        margin-bottom: 0px;
+    }
+    75% { rotate: -15deg; 
+        margin-bottom: 30px;
+    }
+    100% { rotate: 0deg; 
+        margin-bottom: 0px;
+    }
+}
