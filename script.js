@@ -99,6 +99,9 @@ function animacao_placar(value, placar){
 socket.on('ganhou', (placar)=>{
     // console.log('ganhou');
     animacao_placar('ganhou', placar);
+    setTimeout(()=>{
+        location.reload();
+    }, 3000)
 
 
 })
