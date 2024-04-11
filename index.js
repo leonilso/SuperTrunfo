@@ -208,7 +208,7 @@ io.on('connection', (socket) => {
                     } else if(numeroJogadores == 1){
                         io.to(pessoa).emit('reload');
                     }
-                }, 8000);
+                }, 3000);
             }
             for(let pessoaP of perdedores){
                 // io.to(pessoaP).emit('perdeu', cartasUsers[pessoaP].valoresEscolhidos);
