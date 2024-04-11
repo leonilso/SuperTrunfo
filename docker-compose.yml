@@ -1,0 +1,14 @@
+version: '2'
+services:
+  trunfo:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: node_modules/.bin/nodemon --exec npm start
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/app/trunfo
+      - /home/app/trunfo/node_modules
